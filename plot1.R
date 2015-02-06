@@ -6,7 +6,7 @@
 project <-read.csv('household_power_consumption.txt', sep=";")
 
 
-# Subset only date from dates 2007-02-01 and 2007-02-02:
+# Subset only data from dates 2007-02-01 and 2007-02-02:
 
 project2 <- project[ which(as.Date(project$Date, "%d/%m/%Y") == "2007-02-01" | as.Date(project$Date, "%d/%m/%Y") == "2007-02-02"),]
 
@@ -53,6 +53,6 @@ hist(as.numeric(as.character(project3$Global_active_power)),
      xlab='Global Active Power (kilowatts)', 
      main = 'Global Active Power', col= 'red')
 
-# Turn off the png graphice device:
+# Turn off the png graphic device:
 
 dev.off()

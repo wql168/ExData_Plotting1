@@ -1,11 +1,11 @@
-# This R script file is for generation of the plot 1.
+# This R script file is for generation of the plot 2.
 
 
 # read files into R:
 
 project <-read.csv('household_power_consumption.txt', sep=";")
 
-# Subset only date from dates 2007-02-01 and 2007-02-02:
+# Subset only data from dates 2007-02-01 and 2007-02-02:
 
 project2 <- project[ which(as.Date(project$Date, "%d/%m/%Y") == "2007-02-01" | as.Date(project$Date, "%d/%m/%Y") == "2007-02-02"),]
 
@@ -44,6 +44,6 @@ plot(strptime(project4$datetime, format = '%d/%m/%Y%H:%M:%S'),
      ylab='Global Active Power (kilowatts)', xlab = '', type ='o', pch= '.', cex.lab=0.9)
 
 
-# Turn off the png graphice device:
+# Turn off the png graphic device:
 
 dev.off()
